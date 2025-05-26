@@ -4,7 +4,7 @@ This Python package provides utilities for geomatics engineering numerical metho
 
 ## Installation
 
-Onece the package is installed you can use it as follows:
+Once the package is installed you can use it as follows:
 
 ```python
 # Import the whole package
