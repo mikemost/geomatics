@@ -24,7 +24,7 @@ from geomatics import round_matrix, degtodms
 
 ## Updating Notebooks
 
-All notebooks in the GE 410 Numerical Methods for Geomatics workspace have been updated to use this package instead of the original `myfunctions.py` module.
+All notebooks in the workspace have been updated to use this package instead of the original `myfunctions.py` module.
 
 To update additional notebooks, run:
 
