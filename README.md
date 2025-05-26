@@ -4,7 +4,7 @@ This Python package provides utilities for geomatics engineering numerical metho
 
 ## Installation
 
-This package is installed in development mode. To use it:
+Onece the package is installed you can use it as follows:
 
 ```python
 # Import the whole package
@@ -21,17 +21,3 @@ from geomatics import round_matrix, degtodms
   - `method='dec'` or `'decimal'`: Round to decimal places
 
 - `degtodms(decimal, decimals=0)`: Convert decimal degrees to degrees-minutes-seconds format
-
-## Updating Notebooks
-
-All notebooks in the workspace have been updated to use this package instead of the original `myfunctions.py` module.
-
-To update additional notebooks, run:
-
-```
-python update_imports.py
-```
-
-This will scan all Jupyter notebooks in the workspace and replace:
-- `from myfunctions import ...` with `from geomatics import ...`
-- `import myfunctions` with `import geomatics`
