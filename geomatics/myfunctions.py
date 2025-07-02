@@ -41,3 +41,15 @@ def round_matrix(matrix, digits, method='sig'):
                     out = val
             rounded_matrix[i, j] = out
     return rounded_matrix
+
+from math import floor, log10
+def roundsf(value, n):
+    if value == 0:
+        return 0
+    # Calculate the order of magnitude
+    magnitude = int(floor(log10(abs(value)))) + 1
+    # Calculate the rounding factor based on the desired significant figures
+    rounding_factor = n - magnitude
+    # Round the value using the rounding factor
+    rounded_value = round(value, rounding_factor)
+    return rounded_value
