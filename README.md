@@ -21,3 +21,5 @@ from geomatics import round_matrix, degtodms
   - `method='dec'` or `'decimal'`: Round to decimal places
 
 - `degtodms(decimal, decimals=0)`: Convert decimal degrees to degrees-minutes-seconds format
+
+- roundsf(value, n) : Rounds a value to a given number of significant figures
