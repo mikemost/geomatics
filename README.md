@@ -11,7 +11,7 @@ Once the package is installed you can use it as follows:
 import geomatics
 
 # Or import specific functions
-from geomatics import round_matrix, degtodms
+from geomatics import round_matrix, degtodms, roundsf, get_tau_critical
 ```
 
 ## Available Functions
@@ -23,3 +23,6 @@ from geomatics import round_matrix, degtodms
 - `degtodms(decimal, decimals=0)`: Convert decimal degrees to degrees-minutes-seconds format
 
 - `roundsf(value, n)` : Rounds a value to a given number of significant figures
+
+- `get_tau_critical(n_obs: int, df: int, alpha: float = 0.05)` : Get Pope's Tau critical value for outlier detection in geodetic networks.
+- 
