@@ -57,7 +57,7 @@ def roundsf(value, n):
 import numpy as np
 from typing import Union
 
-def get_tau_critical(n_obs: int, df: int, alpha: float = 0.05) -> float:
+def tau(n_obs: int, df: int, alpha: float = 0.05) -> float:
     """
     Get Pope's Tau critical value for outlier detection in geodetic networks.
     
