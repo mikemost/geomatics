@@ -11,7 +11,7 @@ Once the package is installed you can use it as follows:
 import geomatics
 
 # Or import specific functions
-from geomatics import round_matrix, degtodms, roundsf, get_tau_critical
+from geomatics import round_matrix, degtodms, roundsf, tau
 ```
 
 ## Available Functions
