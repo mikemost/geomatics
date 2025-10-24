@@ -24,4 +24,4 @@ from geomatics import round_matrix, degtodms, roundsf, tau
 
 - `roundsf(value, n)` : Rounds a value to a given number of significant figures
 
-- `tau(n_obs: int, df: int, alpha: float = 0.05)` : Get Pope's Tau critical value for outlier detection in geodetic networks.
+- `tau(alpha: float = 0.05, n_obs: int, df: int)` : Get Pope's Tau critical value for outlier detection in geodetic networks.
