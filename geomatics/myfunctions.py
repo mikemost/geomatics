@@ -77,7 +77,7 @@ def tau(alpha: float, n_obs: int, df: int) -> float:
         
     Example:
     --------
-    >>> critical_val = get_tau_critical(alpha=0.05, n_obs=7, df=3)
+    >>> critical_val = tau(alpha=0.05, n_obs=7, df=3)
     >>> print(f"Critical value: {critical_val}")
     Critical value: 1.719
     """
@@ -160,7 +160,7 @@ def tau(alpha: float, n_obs: int, df: int) -> float:
     
     # Direct lookup if exact values exist
     if n_obs in tau_table and df in tau_table[n_obs] and alpha in tau_table[n_obs][df]:
-        return tau_table[alpha][n_obs][df]
+        return tau_table[n_obs][df][alpha]
     
     # Simple interpolation/extrapolation for missing values
     available_n = sorted(tau_table.keys())
@@ -186,7 +186,8 @@ def tau(alpha: float, n_obs: int, df: int) -> float:
     else:
         closest_df = min(available_df, key=lambda x: abs(x - df))
     
-    return tau_table[closest_alpha][closest_n][closest_df]
+    return tau_table[closest_n][closest_df][closest_alpha]
+
 
 
 
