@@ -248,7 +248,7 @@ Performs Pope's Tau test for outlier detection in observations.
    - Error propagation calculations
    - Displaying results with appropriate precision
 
-2. **GE 350 - Digital Photogrammetry**
+2. **GE 422 - Digital Photogrammetry**
    - Coordinate transformations
    - Bundle adjustment computations
    - Quality assessment of photogrammetric solutions
