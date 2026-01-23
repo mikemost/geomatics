@@ -29,7 +29,7 @@ The **geomatics** package is designed specifically for geomatics engineering stu
 
 This library was developed to support teaching and research at the **Geomatics Engineering Department, Copperbelt University**, and is used in courses including:
 - GE 410: Numerical Methods for Geomatics
-- GE 350: Digital Photogrammetry
+- GE 422: Digital Photogrammetry
 - GE 550: Advanced Topics in Geomatics
 
 ---
