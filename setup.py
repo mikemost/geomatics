@@ -20,7 +20,7 @@ setup(
     
     # Author details
     author='Michael Mutale',
-    author_email='',  # Add your email if you want
+    author_email='mikemost@gmail.com',  # Add your email if you want
     
     # URLs
     url='https://github.com/mikemost/geomatics',
