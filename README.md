@@ -136,11 +136,11 @@ print(angle_dms)
 ### Example 3: Significant Figure Rounding
 
 ```python
-from geomatics import sigfig
+from geomatics import roundsf
 
 # Round to 5 significant figures
 value = 123456.789
-rounded_value = sigfig(value, sig=5)
+rounded_value = roundsf(value, sig=5)
 print(rounded_value)
 # Output: 123460.0
 ```
@@ -204,13 +204,13 @@ dms = degtodms(angle)
 
 ---
 
-#### `sigfig(value, sig=5)`
+#### `roundsf(value, n=5)`
 
 Rounds a value to specified significant figures.
 
 **Parameters:**
 - `value` (float): Number to round
-- `sig` (int): Number of significant figures (default: 5)
+- `n` (int): Number of significant figures (default: 5)
 
 **Returns:**
 - Rounded value
@@ -218,7 +218,7 @@ Rounds a value to specified significant figures.
 **Example:**
 ```python
 # Round to 3 significant figures
-result = sigfig(12345.6789, sig=3)
+result = roundsf(12345.6789, 3)
 # Returns: 12300.0
 ```
 
