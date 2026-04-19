@@ -118,7 +118,7 @@ print(rounded)
 
 # Round to 4 significant figures
 rounded_sf = matround(matrix, sf=4)
-print(rounded_sf)
+display(rounded_sf)
 ```
 
 ### Example 2: Degree to DMS Conversion
