@@ -148,7 +148,7 @@ print(rounded_value)
 ### Example 4: Outlier Detection with Pope's Tau Test
 
 ```python
-from geomatics import tau
+from geomatics import tau, roundsf
 import numpy as np
 
 std_residuals = np.array([0.5, 1.2, -0.8, 3.5, 0.3, -1.1, 0.9])
@@ -229,16 +229,17 @@ result = roundsf(12345.6789, 3)
 
 ---
 
-#### `pope_tau_test(residuals, confidence=0.95)`
+#### `tau(alpha, n_obs, df=0.05)`
 
 Performs Pope's Tau test for outlier detection in observations.
 
 **Parameters:**
-- `residuals` (array-like): Array of observation residuals
-- `confidence` (float): Confidence level (default: 0.95)
+- `alpha` (float): Confidence level (default: 0.05)
+- `n_obs ` (int): Number of observations in the network
+- `df ` (int): Degrees of freedom (number of observations minus number of unknowns)
 
 **Returns:**
-- Tuple: (is_outlier (bool), tau_statistic (float))
+- float representing the critical Tau value
 
 **Application:** Used in least squares adjustment and quality control of surveying measurements.
 
@@ -289,11 +290,6 @@ print(matround(adjusted_coords, dec=3))
 azimuth = 115.6650
 print(f"Azimuth: {degtodms(azimuth)}")
 
-# Check for outliers in residuals
-residuals = np.array([0.012, -0.008, 0.155, -0.011])
-outlier, tau = pope_tau_test(residuals)
-if outlier:
-    print(f"Warning: Outlier detected (τ = {tau:.3f})")
 ```
 
 ---
