@@ -111,7 +111,7 @@ matrix = np.array([
 
 # Round to 3 decimal places
 rounded = matround(matrix, dec=3)
-print(rounded)
+display(rounded)
 # Output:
 # [[1.235 2.346]
 #  [3.457 4.568]]
