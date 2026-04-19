@@ -148,19 +148,24 @@ print(rounded_value)
 ### Example 4: Outlier Detection with Pope's Tau Test
 
 ```python
-from geomatics import pope_tau_test
+from geomatics import tau
 import numpy as np
 
-# Observation residuals
-residuals = np.array([0.012, -0.008, 0.015, 0.155, -0.011, 0.009])
+std_residuals = np.array([0.5, 1.2, -0.8, 3.5, 0.3, -1.1, 0.9])
+n_obs = len(std_residuals)
+df = 4  # Degrees of freedom
 
-# Test for outliers at 95% confidence level
-is_outlier, tau_statistic = pope_tau_test(residuals, confidence=0.95)
+# Get critical value
+critical_value = tau(0.05, n_obs, df)
 
-if is_outlier:
-    print(f"Outlier detected! Tau statistic: {tau_statistic:.3f}")
-else:
-    print("No outliers detected")
+print(f"Testing {n_obs} observations")
+print(f"Critical Tau value: {roundsf(critical_value, 3)}")
+print("\nOutlier Analysis:")
+
+for i, residual in enumerate(std_residuals, 1):
+    abs_residual = abs(residual)
+    status = "OUTLIER" if abs_residual > critical_value else "OK"
+    print(f"Obs {i}: {roundsf(residual, 2):6.2f} - {status}")
 ```
 
 ---
