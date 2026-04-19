@@ -43,7 +43,7 @@ def round_matrix(matrix, digits, method='sig'):
     return rounded_matrix
 
 from math import floor, log10
-def roundsf(value, n):
+def roundsf(value, n=5):
     if value == 0:
         return 0
     # Calculate the order of magnitude
